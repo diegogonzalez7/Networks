@@ -39,18 +39,10 @@ public class Info {
             return "Directory";
         }
         String extension = getFileExtension(file);
-        switch (extension) {
-            case "txt":
-            case "java":
-            case "py":
-                return "Text";
-            case "png":
-            case "jpg":
-            case "jpeg":
-            case "gif":
-                return "Image";
-            default:
-                return "Unknown";
-        }
+        return switch (extension) {
+            case "txt", "java", "py" -> "Text";
+            case "png", "jpg", "jpeg", "gif" -> "Image";
+            default -> "Unknown";
+        };
     }
 }
