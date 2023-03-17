@@ -21,7 +21,7 @@ public class TcpServer {
       serverSocket = new ServerSocket(Integer.parseInt(argv[0]));
 
       // Set a timeout of 300 secs
-      serverSocket.setSoTimeout(300_000);
+      serverSocket.setSoTimeout(300000);
       while (true) {
         // Wait for connections
         socket = serverSocket.accept();

@@ -25,7 +25,7 @@ public class MonoThreadTcpServer {
             // Create a server socket
             SSocket = new ServerSocket(Integer.parseInt(argv[0]));
             // Set a timeout of 300 secs
-            SSocket.setSoTimeout(300_000);
+            SSocket.setSoTimeout(300000);
             while (true) {
                 // Wait for connections
 
